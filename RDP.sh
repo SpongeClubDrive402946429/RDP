@@ -1,6 +1,5 @@
 #! /bin/bash
 printf "Installing RDP Be Patience... " >&2
-{
 sudo useradd -m USER
 sudo adduser USER sudo
 echo 'USER:1234' | sudo chpasswd
@@ -30,7 +29,6 @@ sudo ln -s "${PWD}/ffprobe" /usr/local/bin/
 sudo add-apt-repository ppa:jd-team/jdownloader -y
 sudo apt-get update
 sudo apt-get install jdownloader-installer -y
-} &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
 printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debian Linux And Paste Down\n'
